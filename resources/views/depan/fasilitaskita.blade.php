@@ -35,7 +35,7 @@
                     <!-- <iframe width="500" height="315"
                         src="https://www.youtube.com/embed/_-YBCutSvKg">
                     </iframe> -->
-                    <video class="w-100 align-bottom" controls>
+                    <video class="w-100 align-bottom" autoplay="autoplay" controls muted>
                     <source src="{{ asset('depan/video/labor_2h.MP4') }}" type="video/mp4">
                     </video>  
                     </div>
@@ -191,7 +191,7 @@
             <div class="row g-5">
                 <div class="col-lg-6">
                     <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-                        <h1 class="fw-bold text-primary text-uppercase">Mushola dan Kantin</h1>
+                        <h1 class="fw-bold text-primary text-uppercase">Musholla dan Kantin</h1>
                     </div>
                     <p class="mb-4" style="text-align: justify;">
                         Universitas Pahlawan Tuanku Tambusai menyediakan Mushola dan Kantin untuk mahasiswa, dosen, serta staff kampus. Mushola ini dibangun dengan sederhana namun nyaman dan menciptakan lingkungan yang tenang dan damai.
@@ -207,7 +207,8 @@
                         src="{{ asset('depan/video/musholla_kantin.MP4') }}">
                     </iframe>  -->
                     <video class="w-100 align-bottom" controls>
-                    <source src="{{ asset('depan/video/musholla_kantin.MP4') }}" type="video/mp4">
+                    {{-- <source src="{{ asset('depan/video/musholla_kantin.MP4') }}" type="video/mp4"> --}}
+                        <iframe src="https://drive.google.com/file/d/1zUVD1MFEO6WBTqeBhy2KVb3g-M0Ty7cb/preview" width="640" height="480" allow="autoplay"></iframe>
                     </video>
                     </div>
                 </div>

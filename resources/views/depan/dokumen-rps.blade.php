@@ -26,7 +26,7 @@
                                 <td>{{ $item->kurikulum->mata_kuliah }}</td>
                                 <td>{{ $item->tahun_ajaran }}</td>
                                 <td class="text-center">
-                                    <a href="{{ route('dokumen-rps-detail', $item) }}" class="btn btn-success">Download</a>
+                                    <a href="{{ route('dokumen-rps-detail', $item) }}" class="btn btn-success">Lihat</a>
                                 </td>
                             </tr>
                             @endforeach

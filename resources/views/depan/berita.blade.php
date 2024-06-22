@@ -11,7 +11,7 @@
                     <div class="row g-5">
                         @foreach ($beritas as $item)
                         <div class="col-md-6 wow slideInUp" data-wow-delay="0.1s">
-                            <div class="blog-item bg-light rounded overflow-hidden">
+                            <div class="blog-item bg-white rounded-lg overflow-hidden shadow">
                                 <div class="blog-img position-relative overflow-hidden">
                                     <img class="img-fluid" src="{{ asset('storage/' . $item->cover) }}" alt="{{ $item->judul }}">
                                     <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">
@@ -47,7 +47,7 @@
                             <h3 class="mb-0">Popular Post</h3>
                         </div>
                         @foreach ($populars as $item)
-                            <div class="d-flex rounded overflow-hidden mb-3">
+                            <div class="d-flex rounded bg-white shadow overflow-hidden mb-3">
                                 <img class="img-fluid" src="{{ asset('storage/'. $item->cover) }}" style="width: 100px; height: 100px; object-fit: cover;" alt="">
                                 <a href="{{ route('berita-detail', $item->slug) }}" class="h6 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">
                                     {{ \Str::limit($item->judul, 60) }}
@@ -58,9 +58,9 @@
                     <!-- Recent Post End -->
     
                     <!-- Image Start -->
-                    <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
+                    {{-- <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
                         <img src="{{ asset('depan/img/blog-1.jpg') }}" alt="" class="img-fluid rounded">
-                    </div>
+                    </div> --}}
                     <!-- Image End -->
     
                     {{-- <!-- Tags Start -->
@@ -87,13 +87,13 @@
     
                     <!-- Plain Text Start -->
                     <div class="wow slideInUp" data-wow-delay="0.1s">
-                        <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                        {{-- <div class="section-title section-title-sm position-relative pb-3 mb-4">
                             <h3 class="mb-0">Plain Text</h3>
-                        </div>
-                        <div class="bg-light text-center" style="padding: 30px;">
+                        </div> --}}
+                        {{-- <div class="bg-light text-center" style="padding: 30px;">
                             <p>Vero sea et accusam justo dolor accusam lorem consetetur, dolores sit amet sit dolor clita kasd justo, diam accusam no sea ut tempor magna takimata, amet sit et diam dolor ipsum amet diam</p>
                             <a href="" class="btn btn-primary py-2 px-4">Read More</a>
-                        </div>
+                        </div> --}}
                     </div>
                     <!-- Plain Text End -->
                 </div>

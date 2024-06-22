@@ -52,9 +52,9 @@
                     <!-- Recent Post End -->
     
                     <!-- Image Start -->
-                    <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
+                    {{-- <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
                         <img src="{{ asset('depan/img/blog-1.jpg') }}" alt="" class="img-fluid rounded">
-                    </div>
+                    </div> --}}
                     <!-- Image End -->
     
                     <!-- Tags Start -->
@@ -81,13 +81,13 @@
     
                     <!-- Plain Text Start -->
                     <div class="wow slideInUp" data-wow-delay="0.1s">
-                        <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                        {{-- <div class="section-title section-title-sm position-relative pb-3 mb-4">
                             <h3 class="mb-0">Plain Text</h3>
                         </div>
                         <div class="bg-light text-center" style="padding: 30px;">
                             <p>Vero sea et accusam justo dolor accusam lorem consetetur, dolores sit amet sit dolor clita kasd justo, diam accusam no sea ut tempor magna takimata, amet sit et diam dolor ipsum amet diam</p>
                             <a href="" class="btn btn-primary py-2 px-4">Read More</a>
-                        </div>
+                        </div> --}}
                     </div>
                     <!-- Plain Text End -->
                 </div>

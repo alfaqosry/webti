@@ -88,7 +88,10 @@
         </a>
 
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <a class="dropdown-item" href="#">Profile</a>
+            @if(auth()->user()->role == "admin")
+            <a class="dropdown-item" href="{{route('home')}}">Dashboard Admin</a>
+            
+            @endif
             <a class="dropdown-item" href="#">Log Out</a>
 
         </div>
