@@ -26,99 +26,90 @@
         <div class="container">
             <div class="row g-0">
                 <div class="col-lg-12 wow slideInUp" data-wow-delay="0.6s">
-                    <div class="card shadow">
-                        <div class="card-body">
-                            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link active" id="pills-kalender-tab" data-bs-toggle="pill"
-                                        data-bs-target="#pills-kalender" type="button" role="tab"
-                                        aria-controls="pills-kalender" aria-selected="true">Kalender</button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="pills-table-tab" data-bs-toggle="pill"
-                                        data-bs-target="#pills-table" type="button" role="tab"
-                                        aria-controls="pills-table" aria-selected="false">Table</button>
-                                </li>
 
-                            </ul>
-                            <div class="tab-content" id="pills-tabContent">
-                                <div class="tab-pane fade show active" id="pills-kalender" role="tabpanel"
-                                    aria-labelledby="pills-kaleder-tab">
-                                    <div id='calendar'></div>
-                                </div>
-                                <div class="tab-pane fade" id="pills-table" role="tabpanel"
-                                    aria-labelledby="pills-table-tab">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">#</th>
-                                                <th scope="col">Kegiatan</th>
-                                                <th scope="col">Jadwal Kegiatan</th>
-                                                <th scope="col">Ket</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
+                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="pills-kalender-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-kalender" type="button" role="tab"
+                                aria-controls="pills-kalender" aria-selected="true">Kalender</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-table-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-table" type="button" role="tab" aria-controls="pills-table"
+                                aria-selected="false">Table</button>
+                        </li>
 
-                                            @foreach($kalenderakademik as $item)
-                                            <tr>
-                                                <th scope="row">{{ $loop->iteration }}</th>
-                                                <td>
-                                                    <p> {{$item->title}} </p>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-kalender" role="tabpanel"
+                            aria-labelledby="pills-kaleder-tab">
+                            <div id='calendar'></div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-table" role="tabpanel" aria-labelledby="pills-table-tab">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Kegiatan</th>
+                                        <th scope="col">Jadwal Kegiatan</th>
+                                        <th scope="col">Ket</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
 
-                                                </td>
+                                    @foreach ($kalenderakademik as $item)
+                                        <tr>
+                                            <th scope="row">{{ $loop->iteration }}</th>
+                                            <td>
+                                                <p> {{ $item->title }} </p>
 
+                                            </td>
 
-                                                <td>
-                                                    {{$item->start}} s/d {{$item->end}}
+                                            <td>
+                                                {{ $item->start }} s/d {{ $item->end }}
 
-                                                </td>
+                                            </td>
 
-                                                <td></td>
-                                            </tr>
-                                            @endforeach
+                                            <td></td>
+                                        </tr>
+                                    @endforeach
 
-                                        </tbody>
-                                    </table>
-                                </div>
-
-                            </div>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
-
-
 
                 </div>
             </div>
         </div>
     </div>
     <!-- Capaian Pembelajaran Plan End -->
-    <script src="{{asset('fullcalendar/dist/index.global.js')}}"></script>
+    <script src="{{ asset('fullcalendar/dist/index.global.js') }}"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-        var calendarEl = document.getElementById('calendar');
-    
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-          headerToolbar: {
-            left: 'prev,next today',
-            center: 'title',
-            right: 'multiMonthYear,dayGridMonth,timeGridWeek,listYear'
-          },
-          initialView: 'multiMonthYear',
-          initialDate: '2023-07-01',
-          editable: true,
-          selectable: true,
-          dayMaxEvents: true, // allow "more" link when too many events
-          // multiMonthMaxColumns: 1, // guarantee single column
-          // showNonCurrentDates: true,
-          // fixedWeekCount: false,
-          // businessHours: true,
-          // weekends: false,
-          events: {!!$kalender!!}
+            var calendarEl = document.getElementById('calendar');
+
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                headerToolbar: {
+                    left: 'prev,next',
+                    center: 'title',
+                    right: 'multiMonthYear,dayGridMonth'
+                },
+                initialView: 'multiMonthYear',
+                initialDate: '2023-07-01',
+                editable: true,
+                selectable: true,
+                dayMaxEvents: true, // allow "more" link when too many events
+                // multiMonthMaxColumns: 1, // guarantee single column
+                // showNonCurrentDates: true,
+                // fixedWeekCount: false,
+                // businessHours: true,
+                // weekends: false,
+                events: {!! $kalender !!}
+            });
+
+            calendar.render();
         });
-    
-        calendar.render();
-      });
-    
     </script>
 
 

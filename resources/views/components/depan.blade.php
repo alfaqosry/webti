@@ -179,6 +179,8 @@
                     </div>
                     <a href="{{ route('visi-misi') }}" class="btn btn-primary py-3 px-5 mt-3 wow zoomIn rounded-pill"
                         data-wow-delay="0.9s">Selengkapnya</a>
+                        <a href="https://pmb.universitaspahlawan.ac.id/" class="btn btn-warning py-3 px-5 mt-3 wow zoomIn rounded-pill"
+                        data-wow-delay="0.9s">Daftar Mahasiswa Baru</a>
                 </div>
                 <div class="col-lg-5" style="min-height: 500px;">
                     <div class="position-relative h-100">

@@ -1,10 +1,12 @@
 <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0  rounded-pill  ">
+   
     <a href="{{ route('index') }}" class="navbar-brand p-0">
         <h1 class="m-0">
             <!-- Digital Bisnis -->
             <img src="{{ asset('depan/img/logo-qe-hd.png') }}" alt="Logo_QE" style="width: 150px; height: 52px;">
         </h1>
     </a>
+   
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
         <span class="fa fa-bars"></span>
     </button>
@@ -80,8 +82,8 @@
 
     @if (Auth::user()->image == null)
 
-    <div class="dropdown show">
-        <a class=" dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+    <div class="dropdown show d-none d-sm-block">
+        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             <img src="{{ asset('belakang/assets/img/profile.jpg' ) }}" class="rounded-circle "
                 style="width: 50px;margin-right: 10px;margin-left: 10px" alt="Avatar" />

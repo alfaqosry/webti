@@ -23,10 +23,7 @@
     <!-- Capaian Pembelajaran Plan Start -->
     <div class="container-fluid wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
-            <div class="row g-0">
-                <div class="col-lg-12 wow slideInUp" data-wow-delay="0.6s">
-
-                </div>
+            
              
                
                 <div class="row justify-content-center">
@@ -50,7 +47,7 @@
 
                     @foreach($buku as $item)
 
-                    <div class="col-lg-2 col-6 d-flex align-items-stretch">
+                    <div class="col-lg-2 col-6 d-flex align-items-stretch mb-4">
                         <div class="card shadow">
                             <img src=" {{ asset('storage/'.$item->foto_sampul) }}" alt=" {{ $item->judul_buku}}">
 
@@ -102,7 +99,7 @@
                     
                 </div>
                 @endif
-            </div>
+            
         </div>
         <!-- Capaian Pembelajaran Plan End -->
 
