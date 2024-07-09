@@ -81,12 +81,13 @@ class PerpustakaanController extends Controller
 
         $image = [];
         if ($request->hasFile('foto_sampul')) {
-            $image = $request->file('foto_sampul')->store('buku', 'public');
+            $image = $request->file('foto_sampul')->store('pdf-sampul', 'public');
         }
         $pdf = [];
         if ($request->hasFile('pdf_buku')) {
             // $pdf = $request->file('pdf_buku')->store('bukupdf', 'public');
-            $pdf = Storage::disk('laraview')->put('pdf', $request->pdf_buku);
+            // $pdf = Storage::disk('laraview')->put('pdf', $request->pdf_buku);
+            $pdf = $request->file('pdf_buku')->store('pdf', 'public');
         }
 
 
@@ -178,20 +179,16 @@ class PerpustakaanController extends Controller
             $image = $request->file('foto_sampul')->store('buku', 'public');
         }
 
-
-     
-      
-
       
        $pdf = $buku->pdf_buku;
-        if ($request->hasFile('pdf_buku')) {
-            unlink(public_path($buku->pdf_buku));
-            
-            $pdf = Storage::disk('laraview')->put('pdf', $request->pdf_buku);
-            
-        }
 
-
+       if(Storage::exists('storage/' . $pdf)){
+        Storage::delete('storage/' . $pdf);
+        $pdf = $request->file('pdf_buku')->store('pdf', 'public');
+      
+    }else{
+        return redirect()->route('perpustakaan.index')->with('error', 'Buku sampul tidak ditemukan');
+    }
       
             $buku->judul_buku = $request->judul_buku;
             $buku->penulis = $request->penulis;
@@ -219,8 +216,14 @@ class PerpustakaanController extends Controller
         
         $buku = Perpustakaan::findOrFail($id);
 
-        unlink(public_path($buku->pdf_buku));
-        Storage::delete('storage/' . $buku->foto_sampul);
+        
+           
+          
+            Storage::disk('public')->delete($buku->foto_sampul);
+            Storage::disk('public')->delete($buku->pdf_buku);
+        
+          
+        
         $buku->delete();
 
         return redirect()->route('perpustakaan.index')->with('success', 'Buku berhasil dihapus');

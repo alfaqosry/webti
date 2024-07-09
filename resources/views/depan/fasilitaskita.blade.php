@@ -35,9 +35,10 @@
                     <!-- <iframe width="500" height="315"
                         src="https://www.youtube.com/embed/_-YBCutSvKg">
                     </iframe> -->
-                    <video class="w-100 align-bottom" autoplay="autoplay" controls muted>
+                    {{-- <video class="w-100 align-bottom" autoplay="autoplay" controls muted>
                     <source src="{{ asset('depan/video/labor_2h.MP4') }}" type="video/mp4">
-                    </video>  
+                    </video>   --}}
+                    <iframe src="https://drive.google.com/file/d/1JAqZp2_ZzJRqlqncP6CeDdP5SPDG6H9W/preview" width="640" height="480" allow="autoplay"></iframe>
                     </div>
                 </div>
             </div>
@@ -91,9 +92,7 @@
                     <!-- <iframe width="500" height="315"
                         src="https://www.youtube.com/embed/sBNVO7K_Qxg">
                     </iframe> -->
-                    <video class="w-100 align-bottom" controls>
-                    <source src="{{ asset('depan/video/taman_fasilitas_olahraga.MP4') }}" type="video/mp4">
-                    </video> 
+                    <iframe src="https://drive.google.com/file/d/1ILAkoRh-QwXanv1bGuo3DmnwhxhScD2L/preview" width="640" height="480" allow="autoplay"></iframe>
                     </div>
                 </div>
             </div>
@@ -110,9 +109,7 @@
                     <!-- <iframe width="500" height="315"
                         src="{{ asset('depan/video/klinik_rektorat.MP4') }}">
                     </iframe>  -->
-                    <video class="w-100 align-bottom" controls>
-                    <source src="{{ asset('depan/video/klinik_rektorat.MP4') }}" type="video/mp4">
-                    </video>
+                    <iframe src="https://drive.google.com/file/d/1WepMscXEzVeSsx_hRfROGpOnkjwwTaqM/preview" width="640" height="480" allow="autoplay"></iframe>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -149,12 +146,8 @@
                 </div>
                 <div class="col-lg-6" style="min-height: 500px;">
                     <div class="position-relative h-100">
-                    <!-- <iframe width="500" height="315"
-                        src="{{ asset('depan/video/pustaka_lab_bahasa.MP4') }}">
-                    </iframe>  -->
-                    <video class="w-100 align-bottom" controls>
-                    <source src="{{ asset('depan/video/pustaka_lab_bahasa.MP4') }}" type="video/mp4">
-                    </video>
+                    
+                        <iframe src="https://drive.google.com/file/d/1mxDIwpyAVsWiVOoN8WGCEFhoafQNd0Z_/preview" width="640" height="480" allow="autoplay"></iframe>
                     </div>
                 </div>
             </div>
@@ -166,12 +159,7 @@
             <div class="row g-5">
                 <div class="col-lg-6" style="min-height: 500px;">
                     <div class="position-relative h-100">
-                    <!-- <iframe width="500" height="315"
-                        src="https://www.youtube.com/embed/dliSyDO0h4w">
-                    </iframe> -->
-                    <video class="w-100 align-bottom" controls>
-                    <source src="{{ asset('depan/video/gedung_baru.MP4') }}" type="video/mp4">
-                    </video> 
+                        <iframe src="https://drive.google.com/file/d/1nWog11UkftW1ZvaPm-xN242QPuFyohXI/preview" width="640" height="480" allow="autoplay"></iframe>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -203,13 +191,10 @@
                 </div>
                 <div class="col-lg-6" style="min-height: 500px;">
                     <div class="position-relative h-100">
-                    <!-- <iframe width="500" height="315"
-                        src="{{ asset('depan/video/musholla_kantin.MP4') }}">
-                    </iframe>  -->
-                    <video class="w-100 align-bottom" controls>
-                    {{-- <source src="{{ asset('depan/video/musholla_kantin.MP4') }}" type="video/mp4"> --}}
-                        <iframe src="https://drive.google.com/file/d/1zUVD1MFEO6WBTqeBhy2KVb3g-M0Ty7cb/preview" width="640" height="480" allow="autoplay"></iframe>
-                    </video>
+                
+                    
+                   
+                    <iframe src="https://drive.google.com/file/d/1zUVD1MFEO6WBTqeBhy2KVb3g-M0Ty7cb/preview" width="640" height="480" allow="autoplay"></iframe>
                     </div>
                 </div>
             </div>
@@ -224,9 +209,7 @@
                     <!-- <iframe width="500" height="315"
                         src="{{ asset('depan/video/lab_jaringan.mp4')}}">
                     </iframe> -->
-                    <video class="w-100 align-bottom" controls>
-                    <source src="{{ asset('depan/video/lab_jaringan.MP4') }}" type="video/mp4">
-                    </video> 
+                    <iframe src="https://drive.google.com/file/d/1fUv2SWlH9UFw8UvhyE0E67t90caK1ilk/preview" width="640" height="480" allow="autoplay"></iframe>
                     </div>
                 </div>
                 <div class="col-lg-6">

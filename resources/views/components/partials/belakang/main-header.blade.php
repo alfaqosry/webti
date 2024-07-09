@@ -4,7 +4,7 @@
 
         <a href="{{ route('home') }}" class="logo">
             {{-- <img src="{{ asset('belakang/assets/img/logo.svg') }}" alt="navbar brand" class="navbar-brand"> --}}
-            <h2 class="navbar-brand text-white text-bold">Bisnis Digital</h2>
+            <h2 class="navbar-brand text-white text-bold">Teknik Informatika</h2>
         </a>
         <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse"
             data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">

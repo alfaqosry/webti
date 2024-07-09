@@ -55,21 +55,23 @@ class AuthController extends Controller
 
         if(Auth::attempt($cre)) {
             $request->session()->regenerate();
-            return redirect()->route('home');
+            // return redirect()->route('home');
 
-            $checkRole = Auth::user()->role;
-            // dd($checkRole);
-            if($checkRole == 'admin')
-            {
-                return redirect()->route('home');
+            // $checkRole = Auth::user()->role;
+            // // dd($checkRole);
+            // if($checkRole == 'admin')
+            // {
+            //     return redirect()->route('home');
 
-            } elseif ($checkRole == 'mahasiswa')
-            {
-                return redirect()->route('/');
-            } 
+            // } elseif ($checkRole == 'mahasiswa')
+            // {
+            //     return redirect()->route('/');
+            // } 
+
+            return redirect()->route('index');
         }
 
-        return back()->with('gagal', 'Login failed!');
+        return back()->with('error', 'Login failed!');
     }
 
     public function post(Request $request)

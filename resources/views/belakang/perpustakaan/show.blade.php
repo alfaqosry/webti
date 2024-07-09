@@ -33,7 +33,7 @@
                         <div class="card-header">
 
                         </div>
-                        <iframe src="{{ asset('/laraview/#../'.$buku->pdf_buku) }}" frameborder="0" width="100%" height="600px"></iframe>
+                        <iframe src="{{ asset('/laraview/#../storage/'.$buku->pdf_buku) }}" frameborder="0" width="100%" height="600px"></iframe>
                         {{-- <embed src='{{ asset("pdf/$buku->buku_pdf") }}' width="100%" height="600px" alt="pdf"
                             type="application/pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html"> --}}
 
